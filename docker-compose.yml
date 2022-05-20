@@ -6,13 +6,22 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - app
+      - app_1
+      - app_2
     links:
-      - app
-  app:
+      - app_1
+      - app_2
+  app_1:
     build: app
     ports:
       - "8081:8081"
+    environment:
+      - FLASK_RUN_PORT=8081
+      - FLASK_RUN_HOST=0.0.0.0
+  app_2:
+    build: app
+    ports:
+      - "8082:8081"
     environment:
       - FLASK_RUN_PORT=8081
       - FLASK_RUN_HOST=0.0.0.0
