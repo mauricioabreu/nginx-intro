@@ -1,5 +1,7 @@
 # Introdução ao NGINX
 
+Esse repositório é o exemplo prático do conteúdo do conteúdo escrito no link https://dev.to/mauricioabreu/uma-introducao-ao-nginx-1jdg
+
 Pré-requisitos:
 * Entender básico git
 * Ter docker-compose instalado
